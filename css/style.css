@@ -17,7 +17,7 @@
 }
 @font-face {
     font-family: "Caprice";
-    src: url("../fonts/Caprice.ttf") format("woff2");
+    src: url("../fonts/Caprice.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
