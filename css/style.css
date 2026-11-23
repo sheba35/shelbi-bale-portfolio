@@ -742,7 +742,7 @@ body h1 {
     font-family: "Caprice", serif !important;
     font-size: clamp(2.8rem, 5vw, 4.8rem) !important;
     font-weight: normal !important;
-    line-height: 1.08 !important;
+    line-height: 1.08;
 }
 body h2 {
     font-family: "Caprice", serif !important;
@@ -869,4 +869,134 @@ body h2 {
     outline-offset: 0;
     border-color: var(--sun);
     box-shadow: none;
+}
+
+/* =================================
+   MOBILE HOMEPAGE LAYOUT
+================================= */
+
+@media (max-width: 700px) {
+
+    /* Navigation */
+    .site-header {
+        height: 80px;
+    }
+
+    .navbar {
+        width: calc(100% - 2rem);
+        position: relative;
+        gap: 1rem;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .logo img {
+        width: 65px !important;
+        height: 65px !important;
+        transform: none;
+    }
+
+    .nav-toggle-label {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -1rem;
+        right: -1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 15px 25px 20px;
+        background: #ffffff;
+        border-top: 1px solid var(--line);
+        box-shadow: 0 8px 12px rgba(0,0,0,.06);
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Homepage introduction */
+    .index-page .home-intro {
+        padding: 35px 0 25px;
+        overflow: hidden;
+    }
+
+    .index-page .home-intro .container {
+        display: block;
+        position: relative;
+        width: calc(100% - 2.5rem);
+        min-height: 390px;
+    }
+
+    .index-page .home-intro-copy {
+        transform: none;
+        position: relative;
+        z-index: 1;
+        gap: 22px;
+    }
+
+    .index-page .home-intro-copy h1 {
+        font-size: clamp(2.3rem, 9vw, 3.2rem);
+        line-height: 1.1;
+        white-space: normal;
+    }
+
+    .index-page .home-intro-copy .home-description {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Sun graphic */
+    .index-page .home-intro .home-sun {
+        position: absolute;
+        width: 300px;
+        max-width: none;
+        top: 150px;
+        right: -110px;
+        transform: none;
+        opacity: .35;
+        z-index: 0;
+    }
+
+    /* Project section */
+    .index-page .home-work {
+        padding: 35px 0 55px;
+    }
+
+    .index-page .home-work .container {
+        width: calc(100% - 2.5rem);
+    }
+
+    .index-page .home-work-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .index-page .home-project-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .index-page .home-project-image {
+        aspect-ratio: 16 / 10;
+    }
+
+    .index-page .home-project-card h3 {
+        font-size: 1.4rem;
+    }
 }
